@@ -188,7 +188,7 @@ input), подставляет его текущее значение в `span#n
   border: 3px solid #bdbdbd;
 }
 
-#validation-input.valid {
+#validation-input. {
   border-color: #4caf50;
 }
 
