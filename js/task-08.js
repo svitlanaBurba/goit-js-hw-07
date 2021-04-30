@@ -9,8 +9,6 @@ const boxesRef = document.querySelector('#boxes');
 
 const boxes = [];
 let amount = 0;
-let incrementWidth = 30;
-let incrementHeight = 30;
 
 refs.input.addEventListener('input', () => {
   amount = refs.input.value;
@@ -32,15 +30,11 @@ function createBoxes(amount) {
 
     const box = document.createElement('div');
     box.style.background = `rgb(${red}, ${green}, ${blue})`;
-    console.log(`rgb(${red}, ${green}, ${blue})`);
 
-    box.style.width = `${incrementWidth}px`;
-    box.style.height = `${incrementHeight}px`;
+    box.style.width = `${30 + i * 10}px`;
+    box.style.height = `${30 + i * 10}px`;
 
     boxes.push(box);
-
-    incrementWidth += 10;
-    incrementHeight += 10;
   }
 
   boxesRef.append(...boxes);
